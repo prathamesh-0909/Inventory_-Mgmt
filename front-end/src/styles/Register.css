@@ -1,0 +1,34 @@
+.Register{
+    background-color: white;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    border-radius: 20px;
+    padding: 1.5rem;
+    animation: displayRegister 0.5s ease-out;
+}
+
+@keyframes displayRegister {
+    0%{
+        opacity: 0%;
+        transform: translateX(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
+.Add{
+    padding: 0rem;
+}
+
+.CategoryAdd div{
+    width: 100%;
+}
+
+.CategoryAdd button{
+    display: none;
+}
+
+.CategoryAdd input{
+    padding: 0.6rem 0 1.1rem 1rem !important;
+}

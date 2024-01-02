@@ -1,0 +1,128 @@
+:root{
+    --displayAddS: none;
+    --displayUpdateS: none;
+}
+
+.User{
+    background-color: white;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    border-radius: 20px;
+    padding: 1.5rem;
+    animation: displayUser 0.5s ease-out;
+    overflow-y: auto;
+}
+
+@keyframes displayUser {
+    0%{
+        opacity: 0%;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+.Supplier{
+    display: flex;
+    margin-bottom: 1rem;
+    transform: translateY(-0.25rem);
+}
+
+.Add-Supplier-Button{
+    margin-left: 1.5rem;
+    padding: 0px 0.7rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #017256; 
+    color: white;
+    cursor: pointer;
+}
+
+.Add-Supplier{
+    display: var(--displayAddS);
+    padding-bottom: 1.5rem;
+    /* display: flex; */
+}
+
+.Update-Supplier{
+    display: var(--displayUpdateS);
+    padding-bottom: 1.5rem;
+    /* display: flex; */
+}
+
+
+.Add-Supplier input, .Update-Supplier input{
+    border-radius: 7.5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 0.7rem 0.5rem;
+    font-size: 14px;
+}
+
+.Add-Supplier input:nth-child(1), .Update-Supplier input:nth-child(1){
+    margin: 0 1rem 0 0;
+}
+
+.Add-Supplier input:focus, .Update-Supplier input:focus{
+    outline: 1px solid #017256;
+    border-color: #017256;
+    box-shadow: none;
+}
+
+.Add-Supplier button:nth-child(3), .Update-Supplier button:nth-child(3){
+    background-color: #017256;
+    color: white;
+    margin: 0 1rem;
+}
+
+.Add-Supplier button:nth-child(4), .Update-Supplier button:nth-child(4){
+    color: black;
+}
+
+.Add-Supplier button:nth-child(3):hover, .Update-Supplier button:nth-child(3):hover{
+    background-color: #017256;
+    color: white;
+}
+
+.Add-Supplier button:nth-child(4):hover, .Update-Supplier button:nth-child(4):hover{
+    background-color: #f2f2fd;
+    color: black;
+}
+
+.User-heading{
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr 2fr 2fr 1fr;
+    background-color: #f2f2fd;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid #c3c3cf;
+}
+
+.User-heading div{
+    /* border: 1px solid; */
+    text-align: center;
+    padding: 20px 10px;
+    /* padding: 20px; */
+}
+
+.User-column{
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr 2fr 2fr 1fr;
+    text-align: center;
+    border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+.User-column:hover{
+    transform: scale(1.04);
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.User-column div{
+    padding: 15px 10px;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.7);
+    /* border: 1px solid; */
+}

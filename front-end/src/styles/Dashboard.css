@@ -1,0 +1,147 @@
+.Dashboard{
+    /* background-color: white; */
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    /* border-radius: 20px; */
+    /* padding: 1.5rem; */
+    animation: displayDashboard 0.5s ease-out;
+    height: calc(100vh - 9rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@keyframes displayDashboard {
+    0%{
+        opacity: 0%;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+.Cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.Card{
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    padding: 1rem 1rem 1rem 0;
+    place-items: center;
+    color: black;
+}
+
+.card-content{
+    display: grid;
+    place-items: center;
+}
+
+.highSellProfit{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: 1.5rem 0;
+}
+
+.highSell{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem;
+    border-radius: 0 0 15px 15px;
+}
+
+.highSellCard{
+    background-color: #f2f2fd;
+    border-radius: 7.5px;
+    padding: 1rem;
+    margin: 0 0.7rem;
+    overflow: auto;
+    white-space: nowrap;
+    box-shadow: 0 0 2px rgba(0, 0, 0);
+    /* width: 10rem; */
+}
+
+.highSellCard:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.highSellCard div:nth-child(1){
+    font-size: 1.4em;
+}
+
+.highSellCard div:nth-child(2){
+    font-size: 1em;
+    opacity: 90%;
+}
+
+.highSellCard div:nth-child(3){
+    font-size: 0.8em;
+    opacity: 80%;
+}
+
+.profit{
+    clip-path: circle(50%);
+    width: calc(100% - 4rem);
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfitPercent{
+    clip-path: circle(50%);
+    width: 70%;
+    height: 70%;
+    background-color: #f2f2fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    background: #74ffdc;
+}
+
+.GraphData{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 1rem;
+}
+
+.Graph{
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+}
+
+.chartjs-tooltip table{
+    position: absolute;
+    transform: translate(50.5rem, -37.5rem);
+}
+
+.Data{
+    display: grid;
+    text-align: center;
+    place-items: center;
+    gap: 1.5rem;
+}
+
+.income, .expenses{
+    background-color: white;
+    padding: 2.5rem 1rem;
+    border-radius: 15px;
+}
+
+.income div:nth-child(1), .expenses div:nth-child(1){
+    font-size: 1.2em;
+}
+
+.income div:nth-child(2), .expenses div:nth-child(2){
+    font-size: 2em;
+}

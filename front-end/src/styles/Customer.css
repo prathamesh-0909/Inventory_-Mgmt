@@ -1,0 +1,128 @@
+:root{
+    --displayAddC: none;
+    --displayUpdateC: none;
+}
+
+.Customers{
+    background-color: white;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    border-radius: 20px;
+    padding: 1.5rem;
+    animation: displayCustomers 0.5s ease-out;
+    overflow-y: auto;
+}
+
+@keyframes displayCustomers {
+    0%{
+        opacity: 0%;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+.Customer{
+    display: flex;
+    margin-bottom: 1rem;
+    transform: translateY(-0.25rem);
+}
+
+.Add-Customer-Button{
+    margin-left: 1.5rem;
+    padding: 0px 0.7rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #017256; 
+    color: white;
+    cursor: pointer;
+}
+
+.Add-Customer{
+    display: var(--displayAddC);
+    padding-bottom: 1.5rem;
+    /* display: flex; */
+}
+
+.Update-Customer{
+    display: var(--displayUpdateC);
+    padding-bottom: 1.5rem;
+    /* display: flex; */
+}
+
+
+.Add-Customer input, .Update-Customer input{
+    border-radius: 7.5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 0.7rem 0.5rem;
+    font-size: 14px;
+}
+
+.Add-Customer input:nth-child(1), .Update-Customer input:nth-child(1){
+    margin: 0 1rem 0 0;
+}
+
+.Add-Customer input:focus, .Update-Customer input:focus{
+    outline: 1px solid #017256;
+    border-color: #017256;
+    box-shadow: none;
+}
+
+.Add-Customer button:nth-child(3), .Update-Customer button:nth-child(3){
+    background-color: #017256;
+    color: white;
+    margin: 0 1rem;
+}
+
+.Add-Customer button:nth-child(4), .Update-Customer button:nth-child(4){
+    color: black;
+}
+
+.Add-Customer button:nth-child(3):hover, .Update-Customer button:nth-child(3):hover{
+    background-color: #017256;
+    color: white;
+}
+
+.Add-Customer button:nth-child(4):hover, .Update-Customer button:nth-child(4):hover{
+    background-color: #f2f2fd;
+    color: black;
+}
+
+.Customers-heading{
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr 2fr;
+    background-color: #f2f2fd;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid #c3c3cf;
+}
+
+.Customers-heading div{
+    /* border: 1px solid; */
+    text-align: center;
+    padding: 20px 10px;
+    /* padding: 20px; */
+}
+
+.Customers-column{
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr 2fr;
+    text-align: center;
+    border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+.Customers-column:hover{
+    transform: scale(1.04);
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.Customers-column div{
+    padding: 15px 10px;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.7);
+    /* border: 1px solid; */
+}

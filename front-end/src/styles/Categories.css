@@ -1,0 +1,124 @@
+:root{
+    --displayAdd: none;
+    --displayUpdate: none;
+}
+
+.Categories{
+    background-color: white;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    border-radius: 20px;
+    padding: 1.5rem;
+    animation: displayCategories 0.5s ease-out;
+    overflow-y: auto;
+}
+
+@keyframes displayCategories {
+    0%{
+        opacity: 0%;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+.Category{
+    display: flex;
+    margin-bottom: 1rem;
+    transform: translateY(-0.25rem);
+}
+
+.Add-Category-Button{
+    margin-left: 1.5rem;
+    padding: 0px 0.7rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #017256; 
+    color: white;
+    cursor: pointer;
+}
+
+.Add-Category{
+    display: var(--displayAdd);
+    padding-bottom: 1.5rem;
+    /* display: flex; */
+}
+
+.Update-Category{
+    display: var(--displayUpdate);
+    padding-bottom: 1.5rem;
+    /* display: flex; */
+}
+
+
+.Add-Category input, .Update-Category input{
+    border-radius: 7.5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 0.7rem 0.5rem;
+    font-size: 14px;
+}
+
+.Add-Category input:focus, .Update-Category input:focus{
+    outline: 1px solid #017256;
+    border-color: #017256;
+    box-shadow: none;
+}
+
+.Add-Category button:nth-child(2), .Update-Category button:nth-child(2){
+    background-color: #017256;
+    color: white;
+    margin: 0 1rem;
+}
+
+.Add-Category button:nth-child(3), .Update-Category button:nth-child(3){
+    color: black;
+}
+
+.Add-Category button:nth-child(2):hover, .Update-Category button:nth-child(2):hover{
+    background-color: #017256;
+    color: white;
+}
+
+.Add-Category button:nth-child(3):hover, .Update-Category button:nth-child(3):hover{
+    background-color: #f2f2fd;
+    color: black;
+}
+
+.Categories-heading{
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr 2fr;
+    background-color: #f2f2fd;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid #c3c3cf;
+}
+
+.Categories-heading div{
+    /* border: 1px solid; */
+    text-align: center;
+    padding: 20px 10px;
+    /* padding: 20px; */
+}
+
+.Categories-column{
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr 2fr;
+    text-align: center;
+    border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+.Categories-column:hover{
+    transform: scale(1.04);
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.Categories-column div{
+    padding: 15px 10px;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.7);
+    /* border: 1px solid; */
+}

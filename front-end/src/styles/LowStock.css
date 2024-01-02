@@ -1,0 +1,84 @@
+.LowStock{
+    background-color: white;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    border-radius: 20px;
+    padding: 1.5rem;
+    animation: displayLowStock 0.5s ease-out;
+    overflow-y: auto;
+}
+
+@keyframes displayLowStock {
+    0%{
+        opacity: 0%;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+.Header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3rem 0;
+}
+
+.Name{
+    color: #017256;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.3em;
+}
+
+.Add-Filter{
+    display: flex;
+    margin-bottom: 1rem;
+    transform: translateY(-0.25rem);
+}
+
+.Add-Filter a{
+    margin-left: 1.5rem;
+    padding: 0px 0.7rem;
+    border-radius: 5px;
+    background-color: #f2f2fd;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.LowStock-heading{
+    display: grid;
+    grid-template-columns: 1fr 5fr repeat(5, 2fr);
+    background-color: #f2f2fd;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid #c3c3cf;
+}
+
+.LowStock-heading div{
+    /* border: 1px solid; */
+    text-align: center;
+    padding: 20px 10px;
+    /* padding: 20px; */
+}
+
+.LowStock-column{
+    display: grid;
+    grid-template-columns: 1fr 5fr repeat(5, 2fr);
+    text-align: center;
+    border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+.LowStock-column:hover{
+    transform: scale(1.04);
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.LowStock-column div{
+    padding: 15px 10px;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.7);
+    /* border: 1px solid; */
+}
